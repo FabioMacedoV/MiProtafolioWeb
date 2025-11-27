@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar{
+    background-color: #03101F;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav .logo img{
+    border-radius: 50%;
+}
+
+
+nav .opciones{
+    display: flex;
+}
+
+nav .opciones ul{
+    list-style: none;
+    display: flex;
+}
+
+nav .opciones ul li{
+    margin: 0 5px;
+}
+
+nav .opciones ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+nav .opciones .btn-idiomas{
+    background-color: #03101F;
+    border: none;
+    cursor: pointer;
+}
