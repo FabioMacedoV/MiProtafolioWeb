@@ -160,7 +160,7 @@ nav .opciones .btn-idiomas{
 .timeline::before {
   content: "";
   position: absolute;
-  left: 12px;
+  left: -20px;
   top: 0;
   width: 3px;
   height: 100%;
@@ -175,10 +175,10 @@ nav .opciones .btn-idiomas{
 
 .timeline-dot {
   position: absolute;
-  left: -28px;
+  left: -66px;
   top: 5px;
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   background: #4e8cff;
   border-radius: 50%;
   border: 3px solid #0e1625;
