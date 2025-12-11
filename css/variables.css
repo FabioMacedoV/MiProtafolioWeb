@@ -1,3 +1,29 @@
-:root{
-    --color-fondo: #08192D;
+:root {
+  /** ===== Colores Principales ===== **/
+  --color-bg: #08192D;
+  --color-bg-light: #03101F;
+  --color-text: #dbe4f5;
+  --color-text-muted: #9aa8c2;
+
+  --color-accent: #5a7bff;
+  --color-accent-2: #c056ff;
+
+  /** Bordes y sombras **/
+  --shadow-soft: 0 4px 16px rgba(0, 0, 0, 0.2);
+  --shadow-card: 0 8px 28px rgba(0, 0, 0, 0.25);
+  --radius: 16px;
+
+  /** ===== Tipografía ===== **/
+  --font-primary: "Anonymous Pro", sans-serif;
+  --font-secondary: "Montserrat", monospace;
+  --font-size-base: 16px;
+  --font-size-title: 2.2rem;
+  --font-size-subtitle: 1.4rem;
+  --font-size-text: 1rem;
+
+  /** ===== Espaciado ===== **/
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
 }

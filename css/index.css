@@ -1,17 +1,26 @@
-body{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
 }
 
 .nav-bar{
-    background-color: #03101F;
+    background-color: var(--color-bg-light);
 }
 
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: var(--space-sm) var(--space-md);
 }
 
 nav .logo img{
@@ -29,7 +38,7 @@ nav .opciones ul{
 }
 
 nav .opciones ul li{
-    margin: 0 5px;
+    margin: 0 var(--space-xs);
 }
 
 nav .opciones ul li a{
@@ -42,4 +51,96 @@ nav .opciones .btn-idiomas{
     background-color: #03101F;
     border: none;
     cursor: pointer;
+}
+
+/* ===========================
+   PERFIL PRINCIPAL
+=========================== */
+
+.presentacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;        /* centra el texto */
+  gap: 12px;                   /* espacio entre elementos */
+  width: 100%;
+  margin: 0 auto;              /* centrado horizontal */
+  padding: 40px 0;
+}
+
+
+/* Foto */
+.profile__image img {
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+/* Textos */
+.profile__info h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.profile__info h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: .8;
+  margin-bottom: .8rem;
+  color: #FFDC9A;
+}
+
+.profile__info p {
+  max-width: 600px;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  opacity: .9;
+  color: #58B0F3;
+}
+
+.profile-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 20px;
+
+  border-radius: 8px;
+  background:rgba(255, 255, 255, 0.08);
+
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.icon-btn img {
+  width: 25px;
+  height: 25px;
+  filter: brightness(0) invert(1); 
+  transition: 0.25s ease;
+}
+
+.icon-btn:hover {
+  background: rgba(255, 255, 255, 0.20);
+  transform: translateY(-2px);
+}
+
+/*? =========================== RESPONSIVE =========================== ?*/
+
+@media (max-width: 720px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile__info p {
+    margin: 0 auto;
+  }
 }
