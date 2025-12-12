@@ -152,67 +152,200 @@ nav .opciones .btn-idiomas{
 }
 
 .timeline-title {
-  font-size: 2.4rem;
-  margin-bottom: 40px;
-  font-weight: 600;
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: 400;
 }
 
 .timeline::before {
   content: "";
   position: absolute;
-  left: -20px;
+  left: -18px;
   top: 0;
-  width: 3px;
+  width: 1px;
   height: 100%;
-  background: #2e3b52;
+  background: #4E76B1;
 }
 
 .timeline-item {
   position: relative;
-  margin-left: 40px;
+  margin-left: 10px;
   margin-bottom: 50px;
 }
 
 .timeline-dot {
   position: absolute;
-  left: -66px;
+  left: -40px;
   top: 5px;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   background: #4e8cff;
   border-radius: 50%;
   border: 3px solid #0e1625;
 }
 
 .timeline-date {
-  font-size: 1rem;
-  color: #8ba3c7;
-  font-weight: 600;
+  font-family: var(--font-trifty);
+  font-size: 1.5rem;
+  color: #4E76B1;
+  font-weight: 400;
 }
 
 .timeline-role {
   margin: 5px 0 10px;
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-family: var(--font-trifty);
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .timeline-desc {
-  font-size: 0.95rem;
-  color: #cfd6e1;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  color: #B1EA88;
   margin-bottom: 15px;
 }
 
 .timeline-btn {
-  background: #4e8cff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
+  display: inline-flex;
+  gap: 8px;
+  padding: 12px 20px;
+  color: #fff;
   border-radius: 8px;
-  font-size: 0.9rem;
-  transition: 0.2s;
+  background:rgba(255, 255, 255, 0.08);
+
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s ease;
 }
 
 .timeline-btn:hover {
-  background: #6fa4ff;
+  background: rgba(255, 255, 255, 0.20);
+  transform: translateY(-2px);
+}
+
+
+
+/* --- Sección general --- */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  max-width: 700px;
+  margin: auto;
+}
+
+.section-title {
+  font-family: var(--font-primary);
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+/* --- Tarjeta de proyecto --- */
+
+.project-card {
+  display: flex;
+  gap: 16px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  backdrop-filter: blur(4px);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.project-card:hover {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+/* --- Imagen del proyecto --- */
+
+.project-image img {
+  width: 260px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* --- Contenido --- */
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* --- Títulos y descripción --- */
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  line-height: 1.4rem;
+  opacity: 0.85;
+  max-width: 450px;
+}
+
+/* --- Iconos de tecnologías --- */
+
+.project-tech {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-tech img {
+  width: 32px;
+  height: 32px;
+}
+
+/* --- Botones de acción --- */
+
+.project-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 8px;
+
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: white;
+  transition: 0.2s ease;
+}
+
+.btn-icon:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+.btn-icon img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+}
+
+/* --- Responsivo para pantallas pequeñas --- */
+
+@media (max-width: 750px) {
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 180px;
+  }
 }
